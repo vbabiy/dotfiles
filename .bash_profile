@@ -82,7 +82,7 @@ function set_titlebar {
 function set_prompt {
     git="$(parse_git)"
 
-    PS1="${txtred}\u${end} ${txtred}\w${end}"
+    PS1="${txtred}\u@\h${end} ${txtred}\w${end}"
     
     # Added support for VIRTUAL_ENV
     if [ -n "$VIRTUAL_ENV" ] ; then

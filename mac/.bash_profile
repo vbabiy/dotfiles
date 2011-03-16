@@ -6,7 +6,7 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 alias remove_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
-alias vi='vim -o'
+alias vi='vi -o'
 
 . /Users/vbabiy/Projects/git-projects/django/extras/django_bash_completion
 
@@ -100,4 +100,4 @@ function set_prompt {
 }
 
 export PROMPT_COMMAND=set_prompt
-export EDITOR='/Users/vbabiy/bin/vim'
+export EDITOR='vi'

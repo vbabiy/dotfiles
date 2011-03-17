@@ -1,0 +1,11 @@
+[user]
+	name = Vitaly Babiy
+	email = vbabiy86@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[core]
+	editor = vi
+	excludesfile = /home/vbabiy/.gitignore

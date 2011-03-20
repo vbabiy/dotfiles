@@ -46,6 +46,9 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 " Or use vividchalk
 colorscheme topfunky-light
 
+let mapleader=","
+
+
 " Tab mappings.
 map <leader>tt :tabnew<cr>
 map <leader>te :tabedit
@@ -58,7 +61,7 @@ map <leader>tl :tablast<cr>
 map <leader>tm :tabmove
 
 " Uncomment to use Jamis Buck's file opening plugin
-"map <Leader>t :FuzzyFinderTextMate<Enter>
+map <Leader>o :FufFileWithCurrentBufferDir<enter>
 
 " Controversial...swap colon and semicolon for easier commands
 "nnoremap ; :
@@ -72,15 +75,3 @@ map <leader>tm :tabmove
 " autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
 
-" Remap the tab key to do autocompletion or indentation depending on the
-" context (from http://www.vim.org/tips/tip.php?tip_id=102)
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>

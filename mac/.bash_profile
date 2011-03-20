@@ -7,6 +7,7 @@ fi
 
 alias remove_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
 alias vi='vi -o'
+alias gist='gist -o'
 
 . /Users/vbabiy/Projects/git-projects/django/extras/django_bash_completion
 

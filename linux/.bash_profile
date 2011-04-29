@@ -121,3 +121,21 @@ function set_prompt {
 
 export PROMPT_COMMAND=set_prompt
 export EDITOR='vi'
+
+has_virtualenv() {
+    if [ -e .venv ]; then
+        workon `cat .venv`
+    fi
+}
+venv_cd () {
+    cd "$@" && has_virtualenv
+}
+alias cd="venv_cd"
+
+# Welcome Message
+echo -e ""
+echo -ne "Today is "; date
+echo -e ""; cal;
+echo -ne "Up time: ";uptime | awk /'up/ {print $3,$4}'
+echo "";
+fortune
